@@ -1,0 +1,121 @@
+class Building:
+    def __init__(self, building_level: int, building_section: int, building_style: str): # записываю характеристики (аргументы) класса в конструктор объектов
+        """
+        Создание и подготовка к работе объекта "Здание"  
+        :param building_level: Количество этажей здания
+        :param building_section: Количество секций у здания
+        :param building_style: Стиль здания
+        """
+        # создаю документацию
+
+        self.building_level = building_level  # присваиваю атрибутам значения аргументов                    
+        self.building_section = building_section
+        self.building_style = building_style
+       
+       
+        # описываю возможные действия
+    def is_building(self) -> bool:
+        """
+        Функция проверяющая является ли объект зданием
+        :return: Является ли объект зданием или нет
+        """
+        ...
+    def get_building_level(self) -> int:
+        """
+        Функция возвращающая количество этажей здания
+        :return: Количество этажей здания
+        """
+        ...
+    def get_length_building(self, length_section: float) -> float:
+        """
+        Функция определяющая длину здания (длина одной секции умножается на количество секций)
+        :param length_section: Длина одной секции
+        :return: Длина здания
+        """
+        ...
+if __name__ == "__main__":
+    building = Building(11, 2, classicism)  # инициализация экземпляра класса
+
+
+
+
+
+class Courtyard:
+    def __int__(self, number_tree: int, area: float, functin: list, area_building: float):
+        """
+        Создание и подготовка к работе объекта "Двор"
+        :param number_tree: Количество деревьев
+        :param area: Площадь двора
+        :param functin: Функциональное наполнение двора
+        :param area_building: Площадь застройки
+        """
+
+        self.number_tree = number_tree
+        self.area = area
+        self.functin = functin
+        self.area_building = area_building
+
+
+    def get_percent_greening(self, area_greening: float) -> float:
+        """
+        Функция определяющая процент озеленения двора 
+        (площадь озеленения делим на площадь всей территории и умножаем на 100)
+        :param area_greening: Площадь озеленения двора
+        :return: Процент озеленения двора
+        """
+        ...
+
+    def get_coefficient_building(self) -> float:
+        """
+        Функция определяющая коэффициент застройки
+        (площадь застройки делим на общую площадь)
+        :return: Коэффициент застройки
+        """
+       ...
+    def get_number_tree_on_function(self) -> int:
+        """ 
+        Функция определяет количество деревьев на какой-либо функциональной зоне из списка
+        :return: Количество деревьев
+        """
+        ...
+if __name__ == "__main__":
+    courtyard = Courtyard(26, 40.32, sport, 8.1)  # инициализация экземпляра класса
+
+
+
+
+
+class Parking:
+    def __int__(self, number_car: int, type_: list, number_entry: int):
+        """
+        Создание и подготовка к работе объекта "Парковка"
+        :param number_car: Число автомобилей
+        :param type_: Тип парковки  
+        :param number_entry: Количество въездов
+        """
+        self.number_car = number_car
+        self.type_ = type_
+        self.number_entry = number_entry
+
+    def get_number_for_low_mobility(self) -> int:
+        """
+        Функция определяющая число парковочных мест для мгн 
+        (10% от общего числа мест)
+        :return: Число парковочных мест для мгн
+        """
+        ...
+    def get_type_(self) -> str:
+        """
+        Функция определяющая тип парковки   
+        :return: Тип парковки
+        """
+        ...
+    def is_parking(self) -> bool:
+        """
+        Функция определяет является ли объект парковкой
+        :return: Является ли объект парковкой
+        """
+        ...
+if __name__ == "__main__":                
+    parking = Parking(30, open, 2)  # инициализация экземпляра класса
+
